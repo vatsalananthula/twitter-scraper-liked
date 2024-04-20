@@ -165,7 +165,7 @@ def get_dataframe_and_check_duplicates(driver, max_scrolls=10):
     column_names = ['Username', 'Tweet', 'Image', 'Url', 'Profile_type']
     df = pd.DataFrame(tweet_data_list, columns=column_names)
 
-    if len(df) < 1393:
+    if len(df) < 1393: # this is how many liked tweets I have
         print(f"Reached end of scrollable content, collected {len(df)} tweets (less than target).")
     else:
         print(f"Collected {len(df)} tweets (target reached).")
